@@ -1,7 +1,10 @@
-public class Agent {
-
-    public Agent(String blah, int bleh, double bluuh) {
-        
-    }
-
+public class Simulation {
+    List <Agent> agents;
+    SimulationSettings settings;
+    int currentRound;
+    int currentTurn;
+    int totalCooperations;
+    List <String> roundResults;
+    boolean simulationRunning;
+    
 }

@@ -1,6 +1,9 @@
-public class SimulationSetup {
-    boolean initialized = false;
-    List<Agent> agents;
-    SimulationSettings settings;
+public class RunController {
+   SimulationSettings settings;
+   SimulationSetup setup;
+   Simulation simulation;
+   ResultsProcessor resultsProcessor;
+   FileManager fileManager;
+   boolean simulationRunning;
 
 }
