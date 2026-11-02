@@ -40,13 +40,7 @@ public class UserInterface {
       outputArea.setFont(new Font("Monospaced", Font.PLAIN, 80));
       outputArea.setText("Welcome to the Altruism Simulation!\n");
       setBtn.addActionListener(e -> setupMenu());
-     /* startBtn.addActionListener(e -> );
-       viewBtn.addActionListener(e -> displayVaults());
-       saveBtn.addActionListener(e -> {
-           saveToFile("vault_data.txt", vSystem);
-           append("Saved data to file\n");
-       });
-*/  
+
        exitBtn.addActionListener(e -> System.exit(0));
        frame.setVisible(true);
    }
