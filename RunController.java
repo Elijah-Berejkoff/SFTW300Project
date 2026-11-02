@@ -1,7 +1,7 @@
 public class RunController {
    SimulationSettings settings;
    SimulationSetup setup;
-   Simulation simulation;
+  // Simulation simulation;
    ResultsProcessor resultsProcessor;
    FileManager fileManager;
    boolean simulationRunning;

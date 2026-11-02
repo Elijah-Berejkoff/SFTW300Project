@@ -1,12 +1,5 @@
-import java.util.List;
-public class runSimulation(){
-    public static void main(String[] args) {
-        new Simulation();
-        boolean SimulationRunning = true;
-    }
-    
-}
-public class Simulation {
+
+public static class Simulation {
     List <Agent> agents;
     SimulationSettings settings;
     int currentRound;
@@ -16,3 +9,10 @@ public class Simulation {
     boolean simulationRunning;
     
 }
+
+public static void main(String[] args) {
+    Simulation simulation = new Simulation();
+    simulation.simulationRunning = true;
+    UserInterface ui = new UserInterface();
+}
+    
