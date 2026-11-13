@@ -3,14 +3,14 @@ import java.util.List;
 
 
 public class Simulation {
-    List<Agent> agents;
-    SimulationSettings settings;
-    int currentRound;
-    int currentTurn;
-    int totalInteractions;
-    int totalCooperations;
-    List<String> roundResults;
-    boolean simulationRunning;
+    private List<Agent> agents;
+    private SimulationSettings settings;
+    private int currentRound;
+    private int currentTurn;
+    private int totalInteractions;
+    private int totalCooperations;
+    private List<String> roundResults;
+    private boolean simulationRunning;
 
     public Simulation() {
         this.agents = new ArrayList<>();
