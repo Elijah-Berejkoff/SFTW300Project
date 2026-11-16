@@ -106,6 +106,14 @@ public boolean validateParameter(String name, double value) {
       }
       return true;
    }
+
+   public boolean setValue(String name, double value) {
+      return this.updateParameter(name, value);
+   }
+
+   public int getNumberOfRounds() {
+      return this.numberOfRounds;
+   }
  
    public double getParameters(String name) {
       if (name==null) {
