@@ -14,12 +14,30 @@ public class SimulationSetup {
             return false;
         }
         int population = (int)this.settings.getParameters("populationSize");
-        
+        double initialResource = (double)this.settings.getParameters("initialResource");
+        double altruisticCount = population*this.settings.getParameters("altruisticProportion");
+        double selfishCount = population * this.settings.getParameters("selfishProportion");
+        this.agents.clear();
         for (int i = 0; i < population; i++) {
-            this.agents.add(new Agent());
-        }
+            String behavior;
+            if (i < altruisticCount) {
+                behavior = "altruistic";
+            } else if (i < altruisticCount + selfishCount) {
+                behavior = "selfish";
+            } else {
+                behavior = "Reciprocal";
+            }
+                this.agents.add(new Agent(i, behavior, initialResource));
+            }
         this.initialized = true;
         return true;
+    }
+    public boolean initializeSimulation() {
+        return this.initialize();
+    }
+    public void resetPopulation() {
+        this.agents.clear();
+        this.initialized = false;
     }
     public boolean isInitialized() {
         return this.initialized;
